@@ -1,44 +1,45 @@
-### api_final
+# api-final-yatube
 ## Как запустить проект:
 
-Клонировать репозиторий и перейти в него в командной строке:
+<ins>Клонировать репозиторий:</ins>
 
 ```
 git clone https://github.com/Zenchuk-A/api-final-yatube.git
 ```
-
+<ins>Перейти в него в командной строке:</ins>
+ 
 ```
 cd api-final-yatube
 ```
 
-Cоздать и активировать виртуальное окружение:
-
+<ins>Cоздать и активировать виртуальное окружение:</ins>  
+Команда для Windows:
+```
+python -m venv env
+```
+```
+source venv/Scripts/activate
+```
+Команда для Linux и macOS:
 ```
 python3 -m venv env
 ```
-
 ```
 source env/bin/activate
 ```
-
-Установить зависимости из файла requirements.txt:
-
+<ins>Обновить пакетный менеджер:</ins>  
 ```
 python3 -m pip install --upgrade pip
 ```
-
+<ins>Установить зависимости из файла requirements.txt:</ins>
 ```
 pip install -r requirements.txt
 ```
-
-Выполнить миграции:
-
+<ins>Выполнить миграции:</ins>
 ```
 python3 manage.py migrate
 ```
-
-Запустить проект:
-
+<ins>Запустить проект:</ins>
 ```
 python3 manage.py runserver
 ```
