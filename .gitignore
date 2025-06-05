@@ -152,3 +152,6 @@ requests*.http
 yatube_api/api/admin.py
 yatube_api/api/models.py
 yatube_api/api/tests.py
+yatube_api/posts/admin.py
+yatube_api/posts/tests.py
+yatube_api/posts/views.py
