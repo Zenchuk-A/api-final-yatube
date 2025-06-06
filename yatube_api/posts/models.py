@@ -1,5 +1,8 @@
 from django.contrib.auth import get_user_model
+from django.db.models import Q, F
+from django.db.models.constraints import UniqueConstraint, CheckConstraint
 from django.db import models
+
 
 User = get_user_model()
 
@@ -54,4 +57,11 @@ class Follow(models.Model):
     )
 
     class Meta:
-        unique_together = ('user', 'following')
+        constraints = [
+            UniqueConstraint(
+                fields=['user', 'following'], name='unique_follow'
+            ),
+            CheckConstraint(
+                check=~Q(user=F('following')), name='not_follow_self'
+            ),
+        ]
